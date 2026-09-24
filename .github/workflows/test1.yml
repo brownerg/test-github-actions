@@ -13,7 +13,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Show username for docker which is not a secret
-        run: echo ${{secrets.DOCKERHUB_USERNAME}} | sed 's/./& /g'
+        run: env
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
