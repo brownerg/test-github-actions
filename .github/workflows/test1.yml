@@ -1,4 +1,5 @@
 name: hello-world
+run-name: Build triggered by @${{ github.actor }}
 on:
   push:
     branches:
@@ -6,7 +7,7 @@ on:
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
 
-run-name: Deploy ${{ github.event.inputs.environment }} and ${{ github.ref_name }} Run ID: ${{ github.run_id }} - by @${{ github.actor }}
+#run-name: Deploy ${{ github.event.inputs.environment }} and ${{ github.ref_name }} Run ID: ${{ github.run_id }} - by @${{ github.actor }}
 
 jobs:
   build-and-push:
